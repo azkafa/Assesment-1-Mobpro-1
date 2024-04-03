@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Aplikasi Order Pizza</string>
+    <string name="app_name">Aplikasi Pesan Pizza</string>
     <string name="add">Beli</string>
     <string name="username">Pizza Nom-Nom</string>
     <string name="tentang_aplikasi">Tentang Aplikasi</string>
@@ -12,4 +12,5 @@
     <string name="share">Cetak Resi</string>
     <string name="total">Total Harga:</string>
     <string name="add_2">Tambahkan</string>
+    <string name="share_message_template">Total Harga: %1$s\nJumlah Pesanan: %2$d\nTopping: %3$s\nAlamat Pengiriman: %4$s</string>
 </resources>

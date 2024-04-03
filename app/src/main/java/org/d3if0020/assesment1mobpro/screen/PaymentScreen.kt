@@ -39,7 +39,7 @@ import java.text.NumberFormat
 import java.util.Locale
 
 
-@SuppressLint("UnusedMaterialScaffoldPaddingParameter")
+@SuppressLint("UnusedMaterialScaffoldPaddingParameter", "StringFormatInvalid")
 @Composable
 fun PaymentScreen(
     navController: NavHostController,
@@ -136,7 +136,13 @@ fun PaymentScreen(
                     onClick = {
                         shareData(
                             context = context,
-                            message = "Total Price: ${formatHarga(totalHarga)}\nOrder Quantity: $jumlahPesanan\nTopping: $topping\nShipping address: $alamatPengiriman"
+                            message = context.getString(
+                                R.string.share_message_template,
+                                formatHarga(totalHarga),
+                                jumlahPesanan,
+                                topping,
+                                alamatPengiriman
+                            )
                         )
                     },
                     modifier = Modifier
