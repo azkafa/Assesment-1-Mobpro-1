@@ -1,5 +1,6 @@
 package org.d3if0020.assesment1mobpro.screen
 
+import android.content.Context
 import android.content.res.Configuration
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -40,6 +41,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
@@ -66,6 +68,7 @@ fun AddPizzaScreen(navController: NavHostController, pizza: Pizza?) {
     val showResult = rememberSaveable { mutableStateOf(false) }
     val resultMessage = rememberSaveable { mutableStateOf("") }
     val errorMessage = rememberSaveable { mutableStateOf("") }
+    val context = LocalContext.current
 
     fun calculateTotalPrice(): Float {
         var totalPrice = 0f
@@ -83,27 +86,34 @@ fun AddPizzaScreen(navController: NavHostController, pizza: Pizza?) {
         return "Rp. ${formatter.format(harga)}"
     }
 
-    fun validateInput() {
-        if (pizzaQuantity.intValue <= 0) {
-            errorMessage.value = "Order quantity must be more than 0."
-        } else if (selectedTopping.value == null) {
-            errorMessage.value = "Please choose additional toppings."
-        } else if (address.value.isEmpty()) {
-            errorMessage.value = "Please enter a shipping address."
-        } else {
-            errorMessage.value = ""
-            val totalPrice = calculateTotalPrice()
-            val deliveryAddress = address.value
-            val formattedTotalPrice = formatHarga(totalPrice)
-            resultMessage.value = """
-            Order Quantity: ${pizzaQuantity.intValue}
-            Topping: ${selectedTopping.value?.name ?: "Tidak ada"}
-            Shipping address: $deliveryAddress
-            Total price: $formattedTotalPrice
-        """.trimIndent()
-            showResult.value = true
+    fun validateInput(context: Context) {
+        when {
+            pizzaQuantity.intValue <= 0 -> {
+                errorMessage.value = context.getString(R.string.error_quantity_zero)
+            }
+            selectedTopping.value == null -> {
+                errorMessage.value = context.getString(R.string.error_no_topping)
+            }
+            address.value.isEmpty() -> {
+                errorMessage.value = context.getString(R.string.error_empty_address)
+            }
+            else -> {
+                errorMessage.value = ""
+                val totalPrice = calculateTotalPrice()
+                val deliveryAddress = address.value
+                val formattedTotalPrice = formatHarga(totalPrice)
+                resultMessage.value = context.getString(
+                    R.string.result_message,
+                    pizzaQuantity.intValue,
+                    selectedTopping.value?.name ?: context.getString(R.string.no_topping),
+                    deliveryAddress,
+                    formattedTotalPrice
+                )
+                showResult.value = true
+            }
         }
     }
+
     Scaffold(
         topBar = {
             TopAppBar(
@@ -249,7 +259,7 @@ fun AddPizzaScreen(navController: NavHostController, pizza: Pizza?) {
                 Spacer(modifier = Modifier.height(16.dp))
 
                 Button(
-                    onClick = { validateInput() },
+                    onClick = { validateInput(context) },
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(horizontal = 16.dp)

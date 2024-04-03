@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Aplikasi Pesan Pizza</string>
+    <string name="app_name">Order Pizza Application</string>
     <string name="add">Buy</string>
     <string name="username">Pizza Nom-Nom</string>
     <string name="tentang_aplikasi">About App</string>
@@ -17,4 +17,10 @@
     <string name="topping_2" translatable="false">Topping:</string>
     <string name="add_2">Add</string>
     <string name="share_message_template">Total Price: %1$s\nOrder Quantity: %2$d\nTopping: %3$s\nShipping Address: %4$s</string>
+
+    <string name="error_quantity_zero">Order quantity must be more than 0.</string>
+    <string name="error_no_topping">Please choose additional toppings.</string>
+    <string name="error_empty_address">Please enter a shipping address.</string>
+    <string name="result_message">Order Quantity: %1$d\nTopping: %2$s\nShipping address: %3$s\nTotal price: %4$s</string>
+    <string name="no_topping">nothing</string>
 </resources>

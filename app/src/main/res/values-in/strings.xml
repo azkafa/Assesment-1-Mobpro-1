@@ -13,4 +13,10 @@
     <string name="total">Total Harga:</string>
     <string name="add_2">Tambahkan</string>
     <string name="share_message_template">Total Harga: %1$s\nJumlah Pesanan: %2$d\nTopping: %3$s\nAlamat Pengiriman: %4$s</string>
+
+    <string name="error_quantity_zero">Jumlah pesanan harus lebih dari 0.</string>
+    <string name="error_no_topping">Silakan pilih topping tambahan.</string>
+    <string name="error_empty_address">Silakan masukkan alamat pengiriman.</string>
+    <string name="result_message">Jumlah Pesanan: %1$d\nTopping: %2$s\nAlamat Pengiriman: %3$s\nTotal Harga: %4$s</string>
+    <string name="no_topping">Tidak ada</string>
 </resources>
