@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Order PizzaHut</string>
+    <string name="app_name">Aplikasi Order Pizza</string>
     <string name="add">Beli</string>
-    <string name="username">PizzaHut</string>
+    <string name="username">Pizza Nom-Nom</string>
     <string name="tentang_aplikasi">Tentang Aplikasi</string>
     <string name="kembali">Back</string>
     <string name="jumlah_pizza">Jumlah Pesanan:</string>
