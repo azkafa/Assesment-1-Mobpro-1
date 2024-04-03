@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Order PizzaHut</string>
+    <string name="add">Beli</string>
+    <string name="username">PizzaHut</string>
+    <string name="tentang_aplikasi">Tentang Aplikasi</string>
+    <string name="kembali">Back</string>
+    <string name="jumlah_pizza">Jumlah Pesanan:</string>
+    <string name="topping">Tambahan Topping Gratis (Wajib):</string>
+    <string name="alamat">Alamat Pengiriman:</string>
+    <string name="bayar">Bayar</string>
+    <string name="share">Cetak Resi</string>
+    <string name="total">Total Harga:</string>
+    <string name="add_2">Tambahkan</string>
+</resources>

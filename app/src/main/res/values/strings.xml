@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Order PizzaHut</string>
+    <string name="add">Buy</string>
+    <string name="username">PizzaHut</string>
+    <string name="tentang_aplikasi">About App</string>
+    <string name="copyright" translatable="false">Aplikasi Order Pizza adalah sebuah aplikasi Android yang pengguna bisa memilih pizza sesuka hati, pengguna dapat menentukan jumlah pizza yang diinginkan dan memilih topping tambahan sesuai dengan preferensi mereka. Selain itu, pengguna juga dapat memasukkan alamat pengiriman tempat pizza. Setelah selesai melakukan pemesanan, pengguna dapat membagikan resi pembelian melalui berbagai platform media sosial.\n\nAplikasi Order Pizza ini dibuat untuk Assesment 1 Mobpro 1.\n\nCopyright © 2024 - Now Azka Faris Akbar.\nAll rights reserved.</string>
+    <string name="kembali">Kembali</string>
+    <string name="pizza_image" />
+    <string name="jumlah_pizza">Order Quantity:</string>
+    <string name="topping">Additional Free Toppings (Required):</string>
+    <string name="alamat">Shipping address:</string>
+    <string name="bayar">Pay</string>
+    <string name="add_pizza">Menambah Pizza</string>
+    <string name="payment">Bayar Pizza</string>
+    <string name="share">Print Receipt</string>
+    <string name="total">Total Price:</string>
+    <string name="topping_2">Topping:</string>
+    <string name="add_2">Add</string>
+</resources>
